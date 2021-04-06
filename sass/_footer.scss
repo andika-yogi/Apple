@@ -1,0 +1,48 @@
+.footer {
+  grid-column: span 3;
+  grid-row: 10;
+
+  background-color: $color-grey-light-1;
+  display: grid;
+  grid-template-columns:
+    minmax(min-content, 1fr) 10rem 70rem 10em
+    minmax(min-content, 1fr);
+  align-items: center;
+
+  &__logo {
+    grid-column: 2;
+    width: 5rem;
+    fill: $color-secondary;
+  }
+
+  &__link {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    font-size: 2rem;
+
+    [class^="footer__link-"] {
+      text-decoration: none;
+      color: $color-grey-light-2;
+    }
+  }
+
+  &__sosmed {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 15px;
+
+    [class^="footer__sosmed-"] {
+      width: 100%;
+    }
+
+    &-1 {
+      grid-column: 1;
+    }
+    &-2 {
+      grid-column: 2;
+    }
+    &-3 {
+      grid-column: 3;
+    }
+  }
+}
